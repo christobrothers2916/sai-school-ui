@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('./assets/fonts/SourceCodePro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./assets/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-size: 14px !important;
+  color: #616161 !important;
+  background-color: #fff !important;
+  font-family: Lato !important;
+}

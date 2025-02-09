@@ -1,0 +1,17 @@
+<ng-container *ngFor="let nav of navList; let i = index">
+  <a
+    class="text-base"
+    [class.mr-6]="i !== navList.length - 1"
+    nz-dropdown
+    nzTrigger="click"
+    [nzDropdownMenu]="nav?.subItems?.length ? menu : null"
+  >
+    {{ nav?.name }}
+    <span *ngIf="nav?.subItems?.length" nz-icon nzType="down"></span>
+  </a>
+  <nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu>
+      <li nz-menu-item *ngFor="let sub of nav?.subItems">{{ sub?.name }}</li>
+    </ul>
+  </nz-dropdown-menu>
+</ng-container>

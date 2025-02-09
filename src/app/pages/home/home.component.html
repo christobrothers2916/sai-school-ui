@@ -1,0 +1,78 @@
+<div class="main-wrapper">
+  <div nz-row>
+    <div nz-col nzSpan="3"></div>
+    <div nz-col nzSpan="4">
+      <img
+        nz-image
+        width="142px"
+        height="142px"
+        nzSrc="assets/img/sai_logo.png"
+        alt="logo"
+      />
+    </div>
+    <div nz-col nzSpan="14">
+      <div class="flex items-center justify-end mt-2">
+        <div class="mr-3 text-sm">
+          <i class="far fa-envelope mr-1 text-blue"></i
+          >{{ 'admissions.tvm@birlaopenminds.com' }}
+        </div>
+        <div class="mr-3 text-sm">
+          <i class="fas fa-phone-volume mr-1 text-blue"></i> +91 9645573555
+        </div>
+        <button
+          nz-button
+          nzType="primary"
+          nzGhost
+          nzSize="large"
+          nzShape="round"
+        >
+          <i class="fas fa-graduation-cap mr-1"></i>
+          Admission Enquiry
+        </button>
+      </div>
+      <nz-divider></nz-divider>
+      <div class="flex items-center justify-end">
+        <app-header-navs></app-header-navs>
+      </div>
+    </div>
+    <div nz-col nzSpan="3"></div>
+  </div>
+  <app-image-banner></app-image-banner>
+  <div class="about-container mt-20">
+    <div class="mx-40">
+      <div nz-row>
+        <div nz-col nzSpan="12">
+          <div class="flex items-center">
+            <span class="text-[15px] font-semibold leading-[24px] mr-2"
+              >ABOUT US</span
+            >
+            <img src="assets/img/icons/bird.svg" alt="bird" />
+          </div>
+          <div class="text-[37px] mb-0 font-semibold leading-[54px]">
+            Welcome to Birla Open Minds International School
+          </div>
+          <p
+            class="mt-6 mb-4 text-base font-normal leading-6 text-left tracking-[1px]"
+          >
+            Birla Open Minds International School (BOMIS), under the guidance of
+            Birla Edutech Limited, offers comprehensive solution for education
+            that envelopes the individual's learning period right from the
+            formative early years to K-12 schooling.
+          </p>
+          <button nz-button nzType="primary" class="rounded-[4px]">
+            Read More
+          </button>
+        </div>
+        <div nz-col nzSpan="12">
+          <img
+            nz-image
+            nzSrc="assets/img/school.JPG"
+            alt="logo"
+            class="w-[95% h-298px] pl-2"
+          />
+        </div>
+      </div>
+    </div>
+    <app-academia></app-academia>
+  </div>
+</div>
