@@ -14,9 +14,10 @@ export class ImageBannerComponent {
 
   constructor() {
     this.imageBanner = [
-      'assets/img/banner3.jpg',
-      'assets/img/banner2.jpg',
-      'assets/img/banner1.jpg',
+      'assets/img/banner1.png',
+      'assets/img/banner2.png',
+      'assets/img/banner3.png',
+      'assets/img/banner4.png',
     ];
   }
 }

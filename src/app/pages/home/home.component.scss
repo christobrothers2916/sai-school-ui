@@ -1,14 +1,23 @@
-.main-wrapper {
-  // background-image: url('../../../assets/img/background-blue.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  // background: #c2e8f5;
-}
 .about-container {
-  // background-image: url('../../../assets/img/background-blue.jpg');
   background-image: url('../../../assets/img/background-sky-blue.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.beyond-wrapper {
+  background: linear-gradient(to bottom, #e8f8ff, #e1f3fc);
+}
+
+::ng-deep video {
+  height: 400px !important;
+}
+
+.video-modal .ant-modal-content {
+  border-radius: 10px !important;
+}
+
+::ng-deep .video-modal .ant-modal-title {
+  font-size: 21px !important;
+  font-weight: bold !important;
 }
