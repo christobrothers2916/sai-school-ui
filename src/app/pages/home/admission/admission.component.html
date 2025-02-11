@@ -1,0 +1,218 @@
+<div class="admission-wrapper">
+  <app-header-navs></app-header-navs>
+  <div class="card-wrapper px-32 py-5">
+    <nz-card nzHoverable class="w-full">
+      <div class="text-2xl font-semibold mb-4">Admission Enquiry Form</div>
+      <form
+        nz-form
+        [formGroup]="validateForm"
+        class="login-form"
+        (ngSubmit)="submitForm()"
+      >
+        <div nz-row>
+          <div nz-col nzSpan="12" class="pr-3">
+            <div class="text-base font-semibold mb-1">Student Details</div>
+            <nz-form-label nzRequired nzFor="name">Student Name</nz-form-label>
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your student name!">
+                <nz-input-group>
+                  <input
+                    id="name"
+                    type="text"
+                    nz-input
+                    formControlName="studentName"
+                    placeholder="Student Name"
+                  />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-label nzRequired nzFor="admission"
+              >Admission Class</nz-form-label
+            >
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your admission class!">
+                <nz-input-group>
+                  <input
+                    id="admission"
+                    type="text"
+                    nz-input
+                    formControlName="admissionClass"
+                    placeholder="Admission Class"
+                  />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-label nzRequired>Date of birth</nz-form-label>
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your date of birth!">
+                <nz-date-picker
+                  formControlName="dateofBirth"
+                  class="w-full"
+                ></nz-date-picker>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-label nzFor="gender" nzRequired>Gender</nz-form-label>
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please select your gender!">
+                <nz-select
+                  id="gender"
+                  formControlName="gender"
+                  nzPlaceHolder="Gender"
+                >
+                  <nz-option nzValue="male" nzLabel="male"></nz-option>
+                  <nz-option nzValue="female" nzLabel="female"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-label nzRequired nzFor="email"
+              >Mother Tongue</nz-form-label
+            >
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your mother tongue!">
+                <nz-input-group>
+                  <input
+                    type="text"
+                    nz-input
+                    formControlName="motrherTongue"
+                    placeholder="Mother Tongue"
+                  />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-label>Previous School Name & Address</nz-form-label>
+            <nz-form-item>
+              <nz-form-control>
+                <nz-textarea-count [nzMaxCharacterCount]="2000">
+                  <textarea
+                    formControlName="previousSchool"
+                    nz-input
+                    rows="2"
+                    placeholder="Previous School"
+                  ></textarea>
+                </nz-textarea-count>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+          <div nz-col nzSpan="12" class="pl-3">
+            <div class="text-base font-semibold mb-1">Parents Details</div>
+            <nz-form-label nzRequired nzFor="email"
+              >Father's Name</nz-form-label
+            >
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your student name!">
+                <nz-input-group>
+                  <input
+                    type="text"
+                    nz-input
+                    formControlName="fatherName"
+                    placeholder="Father's Name"
+                  />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-label nzRequired nzFor="email">Occupation</nz-form-label>
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your occupation!">
+                <nz-input-group>
+                  <input
+                    type="text"
+                    nz-input
+                    formControlName="occupation"
+                    placeholder="Occupation"
+                  />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-label nzRequired>Mobile No</nz-form-label>
+            <nz-form-item>
+              <nz-form-control>
+                <input
+                  nz-input
+                  formControlName="mobile"
+                  placeholder="Mobile No"
+                />
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-label nzRequired nzFor="email"
+              >Mother's Name</nz-form-label
+            >
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your mother's name!">
+                <nz-input-group>
+                  <input
+                    type="text"
+                    nz-input
+                    formControlName="motherName"
+                    placeholder="Mother's Name"
+                  />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-label nzRequired nzFor="email">Occupation</nz-form-label>
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your occupation!">
+                <nz-input-group>
+                  <input
+                    type="text"
+                    nz-input
+                    formControlName="motherccupation"
+                    placeholder="Occupation"
+                  />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-label nzRequired>Mobile No</nz-form-label>
+            <nz-form-item>
+              <nz-form-control>
+                <input
+                  nz-input
+                  formControlName="motherMobile"
+                  placeholder="Mobile No"
+                />
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-label nzFor="guardian"
+              >Guardian's Details (If Applicable)</nz-form-label
+            >
+            <nz-form-item>
+              <nz-form-control>
+                <nz-input-group>
+                  <input
+                    id="guardian"
+                    type="text"
+                    nz-input
+                    formControlName="guardian"
+                    placeholder="Guardian's Details"
+                  />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-label>Residental Address</nz-form-label>
+            <nz-form-item>
+              <nz-form-control>
+                <nz-textarea-count [nzMaxCharacterCount]="2000">
+                  <textarea
+                    formControlName="address"
+                    nz-input
+                    rows="2"
+                    placeholder="Address"
+                  ></textarea>
+                </nz-textarea-count>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <button
+            nz-button
+            class="login-form-button login-form-margin"
+            [nzType]="'primary'"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </nz-card>
+  </div>
+  <app-information></app-information>
+</div>

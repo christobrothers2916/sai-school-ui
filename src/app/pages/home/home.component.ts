@@ -5,6 +5,7 @@ import { ImageBannerComponent } from './components/image-banner/image-banner.com
 import { CommonModule } from '@angular/common';
 import { AcademiaComponent } from './components/academia/academia.component';
 import { NzModalService } from 'ng-zorro-antd/modal';
+import { InformationComponent } from './components/information/information.component';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ import { NzModalService } from 'ng-zorro-antd/modal';
     HeaderNavsComponent,
     ImageBannerComponent,
     AcademiaComponent,
+    InformationComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -37,7 +39,7 @@ export class HomeComponent {
         </video>
       `,
       nzFooter: null,
-      nzWidth: 700,
+      nzWidth: 500,
       nzClassName: 'video-modal',
       nzMaskClosable: false,
     });

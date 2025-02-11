@@ -1,17 +1,58 @@
-<ng-container *ngFor="let nav of navList; let i = index">
-  <a
-    class="text-base"
-    [class.mr-6]="i !== navList.length - 1"
-    nz-dropdown
-    nzTrigger="click"
-    [nzDropdownMenu]="nav?.subItems?.length ? menu : null"
-  >
-    {{ nav?.name }}
-    <span *ngIf="nav?.subItems?.length" nz-icon nzType="down"></span>
-  </a>
-  <nz-dropdown-menu #menu="nzDropdownMenu">
-    <ul nz-menu>
-      <li nz-menu-item *ngFor="let sub of nav?.subItems">{{ sub?.name }}</li>
-    </ul>
-  </nz-dropdown-menu>
-</ng-container>
+<div nz-row>
+  <div nz-col nzSpan="3"></div>
+  <div nz-col nzSpan="4">
+    <img
+      nz-image
+      width="142px"
+      height="142px"
+      nzSrc="assets/img/sai_logo.png"
+      alt="logo"
+    />
+  </div>
+  <div nz-col nzSpan="14">
+    <div class="flex items-center justify-end mt-2">
+      <div class="mr-3 text-sm">
+        <i class="far fa-envelope mr-1 text-blue"></i
+        >{{ 'saiskarode@gmail.com' }}
+      </div>
+      <div class="mr-3 text-sm">
+        <i class="fas fa-phone-volume mr-1 text-blue"></i> +91 6374967005
+      </div>
+      <button
+        nz-button
+        nzType="primary"
+        nzGhost
+        nzSize="large"
+        nzShape="round"
+        [routerLink]="['/admission']"
+        routerLinkActive="router-link-active"
+      >
+        <i class="fas fa-graduation-cap mr-1"></i>
+        Admission Enquiry
+      </button>
+    </div>
+    <nz-divider></nz-divider>
+    <div class="flex items-center justify-end">
+      <ng-container *ngFor="let nav of navList; let i = index">
+        <a
+          class="text-base"
+          [class.mr-6]="i !== navList.length - 1"
+          nz-dropdown
+          nzTrigger="click"
+          [nzDropdownMenu]="nav?.subItems?.length ? menu : null"
+        >
+          {{ nav?.name }}
+          <span *ngIf="nav?.subItems?.length" nz-icon nzType="down"></span>
+        </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu>
+            <li nz-menu-item *ngFor="let sub of nav?.subItems">
+              {{ sub?.name }}
+            </li>
+          </ul>
+        </nz-dropdown-menu>
+      </ng-container>
+    </div>
+  </div>
+  <div nz-col nzSpan="3"></div>
+</div>

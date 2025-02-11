@@ -9,6 +9,10 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { NzSelectModule } from 'ng-zorro-antd/select';
 
 @NgModule({
   declarations: [],
@@ -23,6 +27,9 @@ import { NzCardModule } from 'ng-zorro-antd/card';
     NzDropDownModule,
     NzCarouselModule,
     NzCardModule,
+    NzFormModule,
+    NzInputModule,
+    NzSelectModule,
   ],
   exports: [
     NzGridModule,
@@ -34,6 +41,10 @@ import { NzCardModule } from 'ng-zorro-antd/card';
     NzDropDownModule,
     NzCarouselModule,
     NzCardModule,
+    NzFormModule,
+    NzInputModule,
+    NzDatePickerModule,
+    NzSelectModule,
   ],
 })
 export class AntDesignModule {}

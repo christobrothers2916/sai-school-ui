@@ -3,11 +3,12 @@ import { AntDesignModule } from '../../../../shared/ant-design.module';
 import { NavItems } from '../../../../interfaces/@type';
 import { navList } from '../../../../constant/navList';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header-navs',
   standalone: true,
-  imports: [CommonModule, AntDesignModule],
+  imports: [CommonModule, AntDesignModule, RouterModule],
   templateUrl: './header-navs.component.html',
   styleUrl: './header-navs.component.scss',
 })

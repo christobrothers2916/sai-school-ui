@@ -1,42 +1,5 @@
 <div class="main-wrapper">
-  <div nz-row>
-    <div nz-col nzSpan="3"></div>
-    <div nz-col nzSpan="4">
-      <img
-        nz-image
-        width="142px"
-        height="142px"
-        nzSrc="assets/img/sai_logo.png"
-        alt="logo"
-      />
-    </div>
-    <div nz-col nzSpan="14">
-      <div class="flex items-center justify-end mt-2">
-        <div class="mr-3 text-sm">
-          <i class="far fa-envelope mr-1 text-blue"></i
-          >{{ 'admissions.tvm@birlaopenminds.com' }}
-        </div>
-        <div class="mr-3 text-sm">
-          <i class="fas fa-phone-volume mr-1 text-blue"></i> +91 9645573555
-        </div>
-        <button
-          nz-button
-          nzType="primary"
-          nzGhost
-          nzSize="large"
-          nzShape="round"
-        >
-          <i class="fas fa-graduation-cap mr-1"></i>
-          Admission Enquiry
-        </button>
-      </div>
-      <nz-divider></nz-divider>
-      <div class="flex items-center justify-end">
-        <app-header-navs></app-header-navs>
-      </div>
-    </div>
-    <div nz-col nzSpan="3"></div>
-  </div>
+  <app-header-navs></app-header-navs>
   <app-image-banner></app-image-banner>
   <div class="about-container mt-20">
     <div class="mx-40">
@@ -49,15 +12,19 @@
             <img src="assets/img/icons/bird.svg" alt="bird" />
           </div>
           <div class="text-[37px] mb-0 font-semibold leading-[54px]">
-            Welcome to Birla Open Minds International School
+            Welcome to SA International School
           </div>
           <p
             class="mt-6 mb-4 text-base font-normal leading-6 text-left tracking-[1px]"
           >
-            Birla Open Minds International School (BOMIS), under the guidance of
-            Birla Edutech Limited, offers comprehensive solution for education
-            that envelopes the individual's learning period right from the
-            formative early years to K-12 schooling.
+            SA International School offers a well-rounded curriculum designed to
+            foster academic,excellence, creativity critical thinking, and
+            problem solving and character development.Our school's architecture
+            meets international standard in every aspect including!
+            classrooms,various labs, washrooms, park and more Join us on this
+            journey of learning, discovery and growth,where your Childers future
+            is over priority. Together, we build a foundation for lifelong
+            success.
           </p>
           <button nz-button nzType="primary" class="rounded-[4px]">
             Read More
@@ -68,7 +35,7 @@
             nz-image
             nzSrc="assets/img/school.JPG"
             alt="logo"
-            class="w-[95%] h-[298px] pl-2"
+            class="w-full h-[321px] pl-2"
           />
         </div>
       </div>
@@ -85,15 +52,13 @@
           <img src="assets/img/icons/bird.svg" alt="bird" />
         </div>
         <div class="text-4xl font-semibold leading-[54px]">
-          Exceeding Beyond Academic <br />
-          Expectations
+          Going Above and Beyond Academic Standards
         </div>
         <div class="text-base font-normal leading-6 mt-4 mb-4">
-          Some of the greatest learning takes place outside the classroom and
-          the focus of the curriculum is to apply the things taught in the
-          classroom to real life. With creativity, innovation, and invention
-          being the main pillars BOMIS excels beyond academic excellence in
-          every way.
+          Outside of the classroom, some of the best learning occurs, and the
+          curriculum emphasizes applying what is learned in the classroom to
+          real-world situations. By focusing on creativity, innovation, and
+          invention, SAIS surpasses academic excellence in every aspect..
         </div>
         <button nz-button nzType="primary" class="rounded-[4px]">
           Read More
@@ -109,4 +74,105 @@
       </div>
     </div>
   </div>
+  <div class="news-event-wrapper">
+    <div class="news-wrapper mt-4 pb-16">
+      <div class="flex items-center justify-center">
+        <span class="text-[15px] font-semibold leading-[24px]">News</span>
+        <img src="assets/img/icons/bird.svg" alt="bird" />
+      </div>
+      <div
+        class="flex items-center justify-center text-[37px] font-semibold leading-[54px] mb-3"
+      >
+        News
+      </div>
+      <div class="card-wrapper flex justify-center items-center">
+        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate1">
+          <nz-card-meta
+            nzTitle="Title"
+            nzDescription="Description"
+          ></nz-card-meta>
+        </nz-card>
+        <ng-template #coverTemplate1>
+          <img alt="example" src="assets/img/cardimg1.JPG" />
+        </ng-template>
+        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate2">
+          <nz-card-meta
+            nzTitle="Title"
+            nzDescription="Description"
+          ></nz-card-meta>
+        </nz-card>
+        <ng-template #coverTemplate2>
+          <img alt="example" src="assets/img/cardimg1.JPG" />
+        </ng-template>
+        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate3">
+          <nz-card-meta
+            nzTitle="Title"
+            nzDescription="Description"
+          ></nz-card-meta>
+        </nz-card>
+        <ng-template #coverTemplate3>
+          <img alt="example" src="assets/img/cardimg1.JPG" />
+        </ng-template>
+        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate4">
+          <nz-card-meta
+            nzTitle="Title"
+            nzDescription="Description"
+          ></nz-card-meta>
+        </nz-card>
+        <ng-template #coverTemplate4>
+          <img alt="example" src="assets/img/cardimg1.JPG" />
+        </ng-template>
+      </div>
+    </div>
+    <div class="events-wrapper pb-16">
+      <div class="flex items-center justify-center">
+        <span class="text-[15px] font-semibold leading-[24px]">Events</span>
+        <img src="assets/img/icons/bird.svg" alt="bird" />
+      </div>
+      <div
+        class="flex items-center justify-center text-[37px] font-semibold leading-[54px] mb-3"
+      >
+        Events
+      </div>
+      <div class="card-wrapper flex justify-center items-center">
+        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate1">
+          <nz-card-meta
+            nzTitle="Title"
+            nzDescription="Description"
+          ></nz-card-meta>
+        </nz-card>
+        <ng-template #coverTemplate1>
+          <img alt="example" src="assets/img/cardimg1.JPG" />
+        </ng-template>
+        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate2">
+          <nz-card-meta
+            nzTitle="Title"
+            nzDescription="Description"
+          ></nz-card-meta>
+        </nz-card>
+        <ng-template #coverTemplate2>
+          <img alt="example" src="assets/img/cardimg1.JPG" />
+        </ng-template>
+        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate3">
+          <nz-card-meta
+            nzTitle="Title"
+            nzDescription="Description"
+          ></nz-card-meta>
+        </nz-card>
+        <ng-template #coverTemplate3>
+          <img alt="example" src="assets/img/cardimg1.JPG" />
+        </ng-template>
+        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate4">
+          <nz-card-meta
+            nzTitle="Title"
+            nzDescription="Description"
+          ></nz-card-meta>
+        </nz-card>
+        <ng-template #coverTemplate4>
+          <img alt="example" src="assets/img/cardimg1.JPG" />
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <app-information></app-information>
 </div>
