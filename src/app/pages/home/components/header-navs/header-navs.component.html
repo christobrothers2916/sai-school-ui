@@ -1,4 +1,33 @@
-<div nz-row>
+<div class="lg:hidden md:hidden">
+  <div class="flex items-center justify-center mt-3">
+    <button
+      nz-button
+      nzType="primary"
+      nzGhost
+      nzSize="large"
+      nzShape="round"
+      [routerLink]="['/admission']"
+      routerLinkActive="router-link-active"
+    >
+      <i class="fas fa-graduation-cap mr-1"></i>
+      Admission Enquiry
+    </button>
+  </div>
+  <nz-divider class="m-0 mt-3 mb-1"></nz-divider>
+  <div class="flex items-center justify-between px-1">
+    <img
+      nz-image
+      width="75px"
+      height="75px"
+      nzSrc="assets/img/sai_logo.png"
+      alt="logo"
+    />
+    <button nz-button nzType="primary" (click)="open()">
+      <span nz-icon [nzType]="visible ? 'menu-unfold' : 'menu-fold'"></span>
+    </button>
+  </div>
+</div>
+<div nz-row class="hidden lg:flex">
   <div nz-col nzSpan="3"></div>
   <div nz-col nzSpan="4">
     <img
@@ -56,3 +85,37 @@
   </div>
   <div nz-col nzSpan="3"></div>
 </div>
+
+<nz-drawer
+  nzTitle="Menu"
+  [nzClosable]="true"
+  [nzVisible]="visible"
+  nzPlacement="left"
+  (nzOnClose)="close()"
+>
+  <ng-container *nzDrawerContent>
+    <ul nz-menu nzMode="inline">
+      <ng-container *ngFor="let nav of navList">
+        <li
+          *ngIf="!nav?.subItems?.length"
+          nz-menu-item
+          [nzSelected]="nav.name === 'Home' ? true : false"
+        >
+          {{ nav?.name }}
+        </li>
+        <li
+          *ngIf="nav?.subItems?.length"
+          nz-submenu
+          [nzTitle]="nav?.name ?? ''"
+          nzIcon="mail"
+        >
+          <ul>
+            <li *ngFor="let subMenu of nav?.subItems" nz-menu-item>
+              {{ subMenu?.name }}
+            </li>
+          </ul>
+        </li>
+      </ng-container>
+    </ul>
+  </ng-container>
+</nz-drawer>

@@ -1,4 +1,4 @@
-<div class="container-wrapper mt-20">
+<div class="container-wrapper mt-6 sm:mt-20">
   <div class="flex items-center justify-center">
     <span class="text-[15px] font-semibold leading-[24px] mr-2">ACADEMIA</span>
     <img src="assets/img/icons/bird.svg" alt="bird" />
@@ -13,8 +13,12 @@
     an ever changing world. At SAIS. <br />we believe wellness, confidence. and
     achievement all begin with our essential skills..
   </div>
-  <div class="card-wrapper flex justify-center items-center mt-[15px]">
-    <nz-card nzHoverable class="w-[18.75rem] mr-5" [nzCover]="coverTemplate1">
+  <div class="card-wrapper sm:flex sm:justify-center sm:items-center mt-[15px]">
+    <nz-card
+      nzHoverable
+      class="w-full sm:w-[18.75rem] sm:mr-5 mb-2 sm:mb-0"
+      [nzCover]="coverTemplate1"
+    >
       <nz-card-meta
         nzTitle="Kinder Garden"
         nzDescription="2 Years - 3 Years"
@@ -23,7 +27,11 @@
     <ng-template #coverTemplate1>
       <img alt="example" src="assets/img/cardimg1.JPG" />
     </ng-template>
-    <nz-card nzHoverable class="w-[18.75rem] mr-5" [nzCover]="coverTemplate2">
+    <nz-card
+      nzHoverable
+      class="w-full sm:w-[18.75rem] sm:mr-5 mb-2 sm:mb-0"
+      [nzCover]="coverTemplate2"
+    >
       <nz-card-meta
         nzTitle="Pre primary"
         nzDescription="3 Years - 4 Years"
@@ -32,7 +40,11 @@
     <ng-template #coverTemplate2>
       <img alt="example" src="assets/img/student-mam.jpeg" />
     </ng-template>
-    <nz-card nzHoverable class="w-[18.75rem]" [nzCover]="coverTemplate3">
+    <nz-card
+      nzHoverable
+      class="w-full sm:w-[18.75rem] sm:mr-5"
+      [nzCover]="coverTemplate3"
+    >
       <nz-card-meta
         nzTitle="primary"
         nzDescription="4 Years - 5 Years"

@@ -3,7 +3,7 @@ import { NavItems } from '../interfaces/@type';
 export const navList: NavItems[] = [
   {
     name: 'Home',
-    route: '',
+    route: '/home',
     subItems: [],
   },
   {

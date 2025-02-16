@@ -1,6 +1,6 @@
 <div class="admission-wrapper">
   <app-header-navs></app-header-navs>
-  <div class="card-wrapper px-32 py-5">
+  <div class="card-wrapper sm:px-32 sm:py-5">
     <nz-card nzHoverable class="w-full">
       <div class="text-2xl font-semibold mb-4">Admission Enquiry Form</div>
       <form
@@ -10,7 +10,7 @@
         (ngSubmit)="submitForm()"
       >
         <div nz-row>
-          <div nz-col nzSpan="12" class="pr-3">
+          <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="12" class="pr-3">
             <div class="text-base font-semibold mb-1">Student Details</div>
             <nz-form-label nzRequired nzFor="name">Student Name</nz-form-label>
             <nz-form-item>
@@ -93,7 +93,7 @@
               </nz-form-control>
             </nz-form-item>
           </div>
-          <div nz-col nzSpan="12" class="pl-3">
+          <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="12" class="pl-3">
             <div class="text-base font-semibold mb-1">Parents Details</div>
             <nz-form-label nzRequired nzFor="email"
               >Father's Name</nz-form-label

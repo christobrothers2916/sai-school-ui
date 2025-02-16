@@ -1,21 +1,23 @@
 <div class="main-wrapper">
   <app-header-navs></app-header-navs>
   <app-image-banner></app-image-banner>
-  <div class="about-container mt-20">
-    <div class="mx-40">
+  <div class="about-container mt-6 sm:mt-20">
+    <div class="lg:mx-40">
       <div nz-row>
-        <div nz-col nzSpan="12">
-          <div class="flex items-center">
+        <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="12">
+          <div class="flex items-center justify-center sm:justify-start">
             <span class="text-[15px] font-semibold leading-[24px] mr-2"
               >ABOUT US</span
             >
             <img src="assets/img/icons/bird.svg" alt="bird" />
           </div>
-          <div class="text-[37px] mb-0 font-semibold leading-[54px]">
+          <div
+            class="text-[37px] mb-0 font-semibold leading-[54px] text-center sm:text-left"
+          >
             Welcome to SA International School
           </div>
           <p
-            class="mt-6 mb-4 text-base font-normal leading-6 text-left tracking-[1px]"
+            class="mt-6 mb-4 text-base font-normal leading-6 text-left tracking-[1px] px-2 sm:p-0s"
           >
             SA International School offers a well-rounded curriculum designed to
             foster academic,excellence, creativity critical thinking, and
@@ -26,11 +28,26 @@
             is over priority. Together, we build a foundation for lifelong
             success.
           </p>
-          <button nz-button nzType="primary" class="rounded-[4px]">
-            Read More
-          </button>
+          <img
+            nz-image
+            nzSrc="assets/img/school.JPG"
+            alt="logo"
+            class="w-full h-[321px] sm:hidden"
+          />
+          <div class="flex justify-center sm:justify-start mt-3 sm:mt-0">
+            <button nz-button nzType="primary" class="rounded-[4px]">
+              Read More
+            </button>
+          </div>
         </div>
-        <div nz-col nzSpan="12">
+        <div
+          nz-col
+          nzXs="24"
+          nzSm="24"
+          nzMd="24"
+          nzLg="12"
+          class="hidden sm:flex"
+        >
           <img
             nz-image
             nzSrc="assets/img/school.JPG"
@@ -42,16 +59,20 @@
     </div>
     <app-academia></app-academia>
   </div>
-  <div class="beyond-wrapper pt-20 pb-20">
-    <div nz-row class="mx-40">
-      <div nz-col nzSpan="12">
-        <div class="flex items-center">
+  <div class="beyond-wrapper sm:pt-20 pb-3 sm:pb-20">
+    <div nz-row class="sm:mx-40">
+      <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="12">
+        <div
+          class="flex items-center justify-center sm:justify-start mt-6 sm:mt-0"
+        >
           <span class="text-[15px] font-semibold leading-[24px] mr-2"
             >BEYOND ACADEMIA</span
           >
           <img src="assets/img/icons/bird.svg" alt="bird" />
         </div>
-        <div class="text-4xl font-semibold leading-[54px]">
+        <div
+          class="text-4xl font-semibold leading-[54px] text-center sm:text-start"
+        >
           Going Above and Beyond Academic Standards
         </div>
         <div class="text-base font-normal leading-6 mt-4 mb-4">
@@ -60,11 +81,23 @@
           real-world situations. By focusing on creativity, innovation, and
           invention, SAIS surpasses academic excellence in every aspect..
         </div>
-        <button nz-button nzType="primary" class="rounded-[4px]">
-          Read More
-        </button>
+        <div class="sm:hidden">
+          <img
+            nz-image
+            nzSrc="assets/img/students.JPG"
+            alt="logo"
+            class="w-full h-[298px]"
+          />
+        </div>
+        <div
+          class="flex justify-center items-center sm:justify-start mt-3 sm:mt-0"
+        >
+          <button nz-button nzType="primary" class="rounded-[4px]">
+            Read More
+          </button>
+        </div>
       </div>
-      <div nz-col nzSpan="12">
+      <div nz-col nzSpan="12" class="hidden sm:flex">
         <img
           nz-image
           nzSrc="assets/img/students.JPG"
@@ -75,7 +108,7 @@
     </div>
   </div>
   <div class="news-event-wrapper">
-    <div class="news-wrapper mt-4 pb-16">
+    <div class="news-wrapper mt-4 sm:pb-16">
       <div class="flex items-center justify-center">
         <span class="text-[15px] font-semibold leading-[24px]">News</span>
         <img src="assets/img/icons/bird.svg" alt="bird" />
@@ -85,8 +118,12 @@
       >
         News
       </div>
-      <div class="card-wrapper flex justify-center items-center">
-        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate1">
+      <div class="card-wrapper sm:flex sm:justify-center sm:items-center">
+        <nz-card
+          nzHoverable
+          class="w-full sm:w-[18.5%] sm:mr-5 mb-2 sm:mb-0"
+          [nzCover]="coverTemplate1"
+        >
           <nz-card-meta
             nzTitle="Title"
             nzDescription="Description"
@@ -95,7 +132,11 @@
         <ng-template #coverTemplate1>
           <img alt="example" src="assets/img/cardimg1.JPG" />
         </ng-template>
-        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate2">
+        <nz-card
+          nzHoverable
+          class="w-full sm:w-[18.5%] sm:mr-5 mb-2 sm:mb-0"
+          [nzCover]="coverTemplate2"
+        >
           <nz-card-meta
             nzTitle="Title"
             nzDescription="Description"
@@ -104,7 +145,11 @@
         <ng-template #coverTemplate2>
           <img alt="example" src="assets/img/cardimg1.JPG" />
         </ng-template>
-        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate3">
+        <nz-card
+          nzHoverable
+          class="w-full sm:w-[18.5%] sm:mr-5 mb-2 sm:mb-0"
+          [nzCover]="coverTemplate3"
+        >
           <nz-card-meta
             nzTitle="Title"
             nzDescription="Description"
@@ -113,7 +158,11 @@
         <ng-template #coverTemplate3>
           <img alt="example" src="assets/img/cardimg1.JPG" />
         </ng-template>
-        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate4">
+        <nz-card
+          nzHoverable
+          class="w-full sm:w-[18.5%] sm:mr-5"
+          [nzCover]="coverTemplate4"
+        >
           <nz-card-meta
             nzTitle="Title"
             nzDescription="Description"
@@ -124,8 +173,8 @@
         </ng-template>
       </div>
     </div>
-    <div class="events-wrapper pb-16">
-      <div class="flex items-center justify-center">
+    <div class="events-wrapper sm:pb-16">
+      <div class="flex items-center justify-center mt-3 sm:mt-0">
         <span class="text-[15px] font-semibold leading-[24px]">Events</span>
         <img src="assets/img/icons/bird.svg" alt="bird" />
       </div>
@@ -134,8 +183,12 @@
       >
         Events
       </div>
-      <div class="card-wrapper flex justify-center items-center">
-        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate1">
+      <div class="card-wrapper sm:flex sm:justify-center sm:items-center">
+        <nz-card
+          nzHoverable
+          class="w-full sm:w-[18.5%] sm:mr-5 mb-2 sm:mb-0"
+          [nzCover]="coverTemplate1"
+        >
           <nz-card-meta
             nzTitle="Title"
             nzDescription="Description"
@@ -144,7 +197,11 @@
         <ng-template #coverTemplate1>
           <img alt="example" src="assets/img/cardimg1.JPG" />
         </ng-template>
-        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate2">
+        <nz-card
+          nzHoverable
+          class="w-full sm:w-[18.5%] sm:mr-5 mb-2 sm:mb-0"
+          [nzCover]="coverTemplate2"
+        >
           <nz-card-meta
             nzTitle="Title"
             nzDescription="Description"
@@ -153,7 +210,11 @@
         <ng-template #coverTemplate2>
           <img alt="example" src="assets/img/cardimg1.JPG" />
         </ng-template>
-        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate3">
+        <nz-card
+          nzHoverable
+          class="w-full sm:w-[18.5%] sm:mr-5 mb-2 sm:mb-0"
+          [nzCover]="coverTemplate3"
+        >
           <nz-card-meta
             nzTitle="Title"
             nzDescription="Description"
@@ -162,7 +223,11 @@
         <ng-template #coverTemplate3>
           <img alt="example" src="assets/img/cardimg1.JPG" />
         </ng-template>
-        <nz-card nzHoverable class="w-[18.5%] mr-5" [nzCover]="coverTemplate4">
+        <nz-card
+          nzHoverable
+          class="w-full sm:w-[18.5%] sm:mr-5"
+          [nzCover]="coverTemplate4"
+        >
           <nz-card-meta
             nzTitle="Title"
             nzDescription="Description"

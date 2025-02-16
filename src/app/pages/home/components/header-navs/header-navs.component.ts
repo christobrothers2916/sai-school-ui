@@ -14,6 +14,15 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderNavsComponent {
   public navList: NavItems[] = navList;
+  public visible = false;
 
   constructor() {}
+
+  close(): void {
+    this.visible = false;
+  }
+
+  open(): void {
+    this.visible = true;
+  }
 }

@@ -12,6 +12,9 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NzSafeAny } from 'ng-zorro-antd/core/types';
+import emailjs from '@emailjs/browser';
+import { SpinnerService } from '../../../services/spinner/spinner.service';
+import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: 'app-admission',
@@ -31,7 +34,9 @@ export class AdmissionComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private spinnerService: SpinnerService,
+    private message: NzMessageService
   ) {}
 
   ngOnInit(): void {
@@ -52,14 +57,38 @@ export class AdmissionComponent implements OnInit {
       motherName: ['', [Validators.required]],
       motherccupation: ['', [Validators.required]],
       motherMobile: ['', [MyValidators.required, MyValidators.mobile]],
-      guardian: ['', [Validators.required]],
+      guardian: [''],
       address: [''],
     });
   }
 
   submitForm(): void {
     if (this.validateForm.valid) {
-      this.router.navigateByUrl('/home');
+      this.spinnerService.requestStarted();
+      const templateParams = {
+        from_name: 'ABC User',
+        from_email: 'abc@example.com',
+        to_name: 'XXX User',
+        to_email: 'christobrothers2916@gmail.com',
+        message: JSON.stringify(this.validateForm.value),
+      };
+      emailjs
+        .send('service_eacvjj2', 'template_tgy827c', templateParams, {
+          publicKey: '7PF34pzFk09kwhJnr',
+        })
+        .then(
+          (response) => {
+            this.spinnerService.requestEnded();
+            this.message.create('success', `Submitted successfully!`);
+            setTimeout(() => {
+              this.router.navigateByUrl('/home');
+            }, 1000);
+          },
+          (err) => {
+            this.spinnerService.requestEnded();
+            this.message.create('error', `Submission failed!`);
+          }
+        );
     } else {
       Object.values(this.validateForm.controls).forEach((control) => {
         if (control.invalid) {

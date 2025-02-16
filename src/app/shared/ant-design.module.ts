@@ -13,6 +13,8 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzDrawerModule } from 'ng-zorro-antd/drawer';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
 
 @NgModule({
   declarations: [],
@@ -30,6 +32,8 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
     NzFormModule,
     NzInputModule,
     NzSelectModule,
+    NzDrawerModule,
+    NzSpinModule,
   ],
   exports: [
     NzGridModule,
@@ -45,6 +49,8 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
     NzInputModule,
     NzDatePickerModule,
     NzSelectModule,
+    NzDrawerModule,
+    NzSpinModule,
   ],
 })
 export class AntDesignModule {}
