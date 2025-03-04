@@ -66,15 +66,13 @@ export class AdmissionComponent implements OnInit {
     if (this.validateForm.valid) {
       this.spinnerService.requestStarted();
       const templateParams = {
-        from_name: 'ABC User',
-        from_email: 'abc@example.com',
-        to_name: 'XXX User',
-        to_email: 'christobrothers2916@gmail.com',
-        message: JSON.stringify(this.validateForm.value),
+        from_name: 'Admission Enquiry',
+        to_name: 'Sai',
+        ...this.validateForm.value,
       };
       emailjs
-        .send('service_eacvjj2', 'template_tgy827c', templateParams, {
-          publicKey: '7PF34pzFk09kwhJnr',
+        .send('service_68favk6', 'template_cir1zwk', templateParams, {
+          publicKey: 'Rx8CprAze2VBNYVMr',
         })
         .then(
           (response) => {

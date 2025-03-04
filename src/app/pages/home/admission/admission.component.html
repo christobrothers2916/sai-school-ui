@@ -30,15 +30,39 @@
               >Admission Class</nz-form-label
             >
             <nz-form-item>
-              <nz-form-control nzErrorTip="Please input your admission class!">
+              <nz-form-control
+                nzErrorTip="Please input select admission class!"
+              >
                 <nz-input-group>
-                  <input
+                  <nz-select
                     id="admission"
-                    type="text"
-                    nz-input
                     formControlName="admissionClass"
-                    placeholder="Admission Class"
-                  />
+                    nzPlaceHolder="Admission Class"
+                  >
+                    <nz-option
+                      nzValue="Pre Nursery"
+                      nzLabel="Pre Nursery"
+                    ></nz-option>
+                    <nz-option nzValue="Nursery" nzLabel="Nursery"></nz-option>
+                    <nz-option nzValue="LKG" nzLabel="LKG"></nz-option>
+                    <nz-option nzValue="UKG" nzLabel="UKG"></nz-option>
+                    <nz-option
+                      nzValue="GRADE - I"
+                      nzLabel="GRADE - I"
+                    ></nz-option>
+                    <nz-option
+                      nzValue="GRADE - II"
+                      nzLabel="GRADE - II"
+                    ></nz-option>
+                    <nz-option
+                      nzValue="GRADE - III"
+                      nzLabel="GRADE - III"
+                    ></nz-option>
+                    <nz-option
+                      nzValue="GRADE - IV"
+                      nzLabel="GRADE - IV"
+                    ></nz-option>
+                  </nz-select>
                 </nz-input-group>
               </nz-form-control>
             </nz-form-item>

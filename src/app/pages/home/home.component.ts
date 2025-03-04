@@ -25,7 +25,7 @@ import { InformationComponent } from './components/information/information.compo
 export class HomeComponent {
   constructor(private modal: NzModalService) {
     setTimeout(() => {
-      // this.openVideoModal();
+      this.openVideoModal();
     }, 1000);
   }
 
