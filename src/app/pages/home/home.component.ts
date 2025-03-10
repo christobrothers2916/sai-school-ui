@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { AntDesignModule } from '../../shared/ant-design.module';
-import { HeaderNavsComponent } from './components/header-navs/header-navs.component';
 import { ImageBannerComponent } from './components/image-banner/image-banner.component';
 import { CommonModule } from '@angular/common';
 import { AcademiaComponent } from './components/academia/academia.component';
 import { NzModalService } from 'ng-zorro-antd/modal';
-import { InformationComponent } from './components/information/information.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,17 +12,18 @@ import { InformationComponent } from './components/information/information.compo
   imports: [
     CommonModule,
     AntDesignModule,
-    HeaderNavsComponent,
     ImageBannerComponent,
     AcademiaComponent,
-    InformationComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   providers: [NzModalService],
 })
 export class HomeComponent {
-  constructor(private modal: NzModalService) {
+  constructor(
+    private modal: NzModalService,
+    private router: Router
+  ) {
     setTimeout(() => {
       this.openVideoModal();
     }, 1000);
@@ -38,10 +38,22 @@ export class HomeComponent {
           Your browser does not support the video tag.
         </video>
       `,
-      nzFooter: null,
+      nzFooter: [
+        {
+          label: 'Admission Enquiry',
+          type: 'primary',
+          onClick: () => this.router.navigate(['/admission']),
+        },
+      ],
       nzWidth: 500,
       nzClassName: 'video-modal',
       nzMaskClosable: false,
     });
+  }
+
+  navigateTo(route: string) {
+    if (route) {
+      this.router.navigate([route]);
+    }
   }
 }

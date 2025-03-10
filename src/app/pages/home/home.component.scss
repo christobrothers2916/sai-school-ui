@@ -28,3 +28,8 @@
   font-size: 21px !important;
   font-weight: bold !important;
 }
+
+::ng-deep .video-modal .ant-modal-footer {
+  display: flex;
+  justify-content: center;
+}

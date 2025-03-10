@@ -1,0 +1,65 @@
+.contact-container {
+  width: 100%;
+  background: #fff;
+
+  .banner {
+    position: relative;
+    height: 250px;
+    background: url('../../../assets/img/banner2.png') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 227, 255, 0.54); /* Orange overlay */
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .contact-content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .title-icon {
+        color: #e65c39;
+        font-size: 20px;
+      }
+    }
+
+    .contact-details {
+      .contact-section {
+        h3 {
+          font-size: 18px;
+          font-weight: bold;
+          color: #333;
+        }
+
+        p {
+          font-size: 16px;
+          color: #666;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,4 @@
 <div class="main-wrapper">
-  <app-header-navs></app-header-navs>
   <app-image-banner></app-image-banner>
   <div class="about-container mt-6 sm:mt-20">
     <div class="lg:mx-40">
@@ -35,7 +34,12 @@
             class="w-full h-[321px] sm:hidden"
           />
           <div class="flex justify-center sm:justify-start mt-3 sm:mt-0">
-            <button nz-button nzType="primary" class="rounded-[4px]">
+            <button
+              nz-button
+              nzType="primary"
+              class="rounded-[4px]"
+              (click)="navigateTo('/about')"
+            >
               Read More
             </button>
           </div>
@@ -92,7 +96,12 @@
         <div
           class="flex justify-center items-center sm:justify-start mt-3 sm:mt-0"
         >
-          <button nz-button nzType="primary" class="rounded-[4px]">
+          <button
+            nz-button
+            nzType="primary"
+            class="rounded-[4px]"
+            (click)="navigateTo('/programs')"
+          >
             Read More
           </button>
         </div>
@@ -107,137 +116,4 @@
       </div>
     </div>
   </div>
-  <div class="news-event-wrapper">
-    <div class="news-wrapper mt-4 sm:pb-16">
-      <div class="flex items-center justify-center">
-        <span class="text-[15px] font-semibold leading-[24px]">News</span>
-        <img src="assets/img/icons/bird.svg" alt="bird" />
-      </div>
-      <div
-        class="flex items-center justify-center text-[37px] font-semibold leading-[54px] mb-3"
-      >
-        News
-      </div>
-      <div class="card-wrapper sm:flex sm:justify-center sm:items-center">
-        <nz-card
-          nzHoverable
-          class="w-full sm:w-[18.5%] sm:mr-5 mb-2 sm:mb-0"
-          [nzCover]="coverTemplate1"
-        >
-          <nz-card-meta
-            nzTitle="Title"
-            nzDescription="Description"
-          ></nz-card-meta>
-        </nz-card>
-        <ng-template #coverTemplate1>
-          <img alt="example" src="assets/img/cardimg1.JPG" />
-        </ng-template>
-        <nz-card
-          nzHoverable
-          class="w-full sm:w-[18.5%] sm:mr-5 mb-2 sm:mb-0"
-          [nzCover]="coverTemplate2"
-        >
-          <nz-card-meta
-            nzTitle="Title"
-            nzDescription="Description"
-          ></nz-card-meta>
-        </nz-card>
-        <ng-template #coverTemplate2>
-          <img alt="example" src="assets/img/cardimg1.JPG" />
-        </ng-template>
-        <nz-card
-          nzHoverable
-          class="w-full sm:w-[18.5%] sm:mr-5 mb-2 sm:mb-0"
-          [nzCover]="coverTemplate3"
-        >
-          <nz-card-meta
-            nzTitle="Title"
-            nzDescription="Description"
-          ></nz-card-meta>
-        </nz-card>
-        <ng-template #coverTemplate3>
-          <img alt="example" src="assets/img/cardimg1.JPG" />
-        </ng-template>
-        <nz-card
-          nzHoverable
-          class="w-full sm:w-[18.5%] sm:mr-5"
-          [nzCover]="coverTemplate4"
-        >
-          <nz-card-meta
-            nzTitle="Title"
-            nzDescription="Description"
-          ></nz-card-meta>
-        </nz-card>
-        <ng-template #coverTemplate4>
-          <img alt="example" src="assets/img/cardimg1.JPG" />
-        </ng-template>
-      </div>
-    </div>
-    <div class="events-wrapper sm:pb-16">
-      <div class="flex items-center justify-center mt-3 sm:mt-0">
-        <span class="text-[15px] font-semibold leading-[24px]">Events</span>
-        <img src="assets/img/icons/bird.svg" alt="bird" />
-      </div>
-      <div
-        class="flex items-center justify-center text-[37px] font-semibold leading-[54px] mb-3"
-      >
-        Events
-      </div>
-      <div class="card-wrapper sm:flex sm:justify-center sm:items-center">
-        <nz-card
-          nzHoverable
-          class="w-full sm:w-[18.5%] sm:mr-5 mb-2 sm:mb-0"
-          [nzCover]="coverTemplate1"
-        >
-          <nz-card-meta
-            nzTitle="Title"
-            nzDescription="Description"
-          ></nz-card-meta>
-        </nz-card>
-        <ng-template #coverTemplate1>
-          <img alt="example" src="assets/img/cardimg1.JPG" />
-        </ng-template>
-        <nz-card
-          nzHoverable
-          class="w-full sm:w-[18.5%] sm:mr-5 mb-2 sm:mb-0"
-          [nzCover]="coverTemplate2"
-        >
-          <nz-card-meta
-            nzTitle="Title"
-            nzDescription="Description"
-          ></nz-card-meta>
-        </nz-card>
-        <ng-template #coverTemplate2>
-          <img alt="example" src="assets/img/cardimg1.JPG" />
-        </ng-template>
-        <nz-card
-          nzHoverable
-          class="w-full sm:w-[18.5%] sm:mr-5 mb-2 sm:mb-0"
-          [nzCover]="coverTemplate3"
-        >
-          <nz-card-meta
-            nzTitle="Title"
-            nzDescription="Description"
-          ></nz-card-meta>
-        </nz-card>
-        <ng-template #coverTemplate3>
-          <img alt="example" src="assets/img/cardimg1.JPG" />
-        </ng-template>
-        <nz-card
-          nzHoverable
-          class="w-full sm:w-[18.5%] sm:mr-5"
-          [nzCover]="coverTemplate4"
-        >
-          <nz-card-meta
-            nzTitle="Title"
-            nzDescription="Description"
-          ></nz-card-meta>
-        </nz-card>
-        <ng-template #coverTemplate4>
-          <img alt="example" src="assets/img/cardimg1.JPG" />
-        </ng-template>
-      </div>
-    </div>
-  </div>
-  <app-information></app-information>
 </div>

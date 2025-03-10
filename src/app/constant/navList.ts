@@ -8,44 +8,13 @@ export const navList: NavItems[] = [
   },
   {
     name: 'About US',
-    route: '',
+    route: '/about',
     subItems: [],
   },
   {
     name: 'Our Programmes',
-    route: '',
-    subItems: [
-      {
-        name: 'Pre-School',
-        route: '',
-      },
-      {
-        name: 'Primary School',
-        route: '',
-      },
-      {
-        name: 'Middle School',
-        route: '',
-      },
-      {
-        name: 'High School',
-        route: '',
-      },
-    ],
-  },
-  {
-    name: 'News & Events',
-    route: '',
-    subItems: [
-      {
-        name: 'News',
-        route: '',
-      },
-      {
-        name: 'Events',
-        route: '',
-      },
-    ],
+    route: '/programs',
+    subItems: [],
   },
   {
     name: 'Admissions',
@@ -53,31 +22,22 @@ export const navList: NavItems[] = [
     subItems: [
       {
         name: 'Admission Process',
-        route: '',
+        route: '/admission/admissionProcess',
       },
       {
         name: 'Admission Form',
-        route: '',
-      },
-      {
-        name: 'Fee structure ',
-        route: '',
+        route: '/admission',
       },
     ],
   },
   {
-    name: 'Careers',
-    route: '',
-    subItems: [],
-  },
-  {
     name: 'Gallery',
-    route: '',
+    route: '/gallery',
     subItems: [],
   },
   {
     name: 'Contact Us',
-    route: '',
+    route: '/contact',
     subItems: [],
   },
 ];

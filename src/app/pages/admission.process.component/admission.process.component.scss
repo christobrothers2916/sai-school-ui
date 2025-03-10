@@ -1,0 +1,82 @@
+.admissions-process {
+  text-align: center;
+
+  .banner {
+    position: relative;
+    height: 250px;
+    background-image: url('../../../assets/img/admission-banner.png'); /* Adjust path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 227, 255, 0.54); /* Orange overlay */
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .admission-content {
+    background: #fff;
+    padding: 50px;
+  }
+
+  .sub-heading {
+    color: red;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .main-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .step-card {
+    position: relative;
+    width: 180px;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="gallery-container">
+  <div class="banner">
+    <h1>Gallery</h1>
+  </div>
+
+  <div class="gallery-grid">
+    <nz-card
+      *ngFor="let item of galleryItems"
+      [nzHoverable]="true"
+      class="gallery-card"
+    >
+      <img nz-image [nzSrc]="item.image" class="gallery-img" />
+      <p class="gallery-title">{{ item.title }}</p>
+    </nz-card>
+  </div>
+</div>

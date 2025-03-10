@@ -3,7 +3,7 @@ import { AntDesignModule } from '../../../../shared/ant-design.module';
 import { NavItems } from '../../../../interfaces/@type';
 import { navList } from '../../../../constant/navList';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header-navs',
@@ -16,7 +16,7 @@ export class HeaderNavsComponent {
   public navList: NavItems[] = navList;
   public visible = false;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   close(): void {
     this.visible = false;
@@ -24,5 +24,11 @@ export class HeaderNavsComponent {
 
   open(): void {
     this.visible = true;
+  }
+
+  navigateTo(route: any) {
+    if (route) {
+      this.router.navigate([route]);
+    }
   }
 }

@@ -64,8 +64,9 @@
     <div class="flex items-center justify-end">
       <ng-container *ngFor="let nav of navList; let i = index">
         <a
-          class="text-base"
+          class="text-base cursor-pointer"
           [class.mr-6]="i !== navList.length - 1"
+          (click)="navigateTo(nav?.route)"
           nz-dropdown
           nzTrigger="click"
           [nzDropdownMenu]="nav?.subItems?.length ? menu : null"
@@ -75,7 +76,11 @@
         </a>
         <nz-dropdown-menu #menu="nzDropdownMenu">
           <ul nz-menu>
-            <li nz-menu-item *ngFor="let sub of nav?.subItems">
+            <li
+              nz-menu-item
+              *ngFor="let sub of nav?.subItems"
+              [routerLink]="sub?.route"
+            >
               {{ sub?.name }}
             </li>
           </ul>
@@ -100,6 +105,7 @@
           *ngIf="!nav?.subItems?.length"
           nz-menu-item
           [nzSelected]="nav.name === 'Home' ? true : false"
+          [routerLink]="nav?.route"
         >
           {{ nav?.name }}
         </li>
@@ -110,7 +116,11 @@
           nzIcon="mail"
         >
           <ul>
-            <li *ngFor="let subMenu of nav?.subItems" nz-menu-item>
+            <li
+              *ngFor="let subMenu of nav?.subItems"
+              nz-menu-item
+              [routerLink]="subMenu?.route"
+            >
               {{ subMenu?.name }}
             </li>
           </ul>

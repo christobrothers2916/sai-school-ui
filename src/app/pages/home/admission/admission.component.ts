@@ -1,7 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { HeaderNavsComponent } from '../components/header-navs/header-navs.component';
-import { InformationComponent } from '../components/information/information.component';
 import { AntDesignModule } from '../../../shared/ant-design.module';
 import {
   AbstractControl,
@@ -19,13 +17,7 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 @Component({
   selector: 'app-admission',
   standalone: true,
-  imports: [
-    CommonModule,
-    HeaderNavsComponent,
-    InformationComponent,
-    AntDesignModule,
-    ReactiveFormsModule,
-  ],
+  imports: [CommonModule, AntDesignModule, ReactiveFormsModule],
   templateUrl: './admission.component.html',
   styleUrl: './admission.component.scss',
 })

@@ -33,19 +33,30 @@
     </div>
     <div nz-col [nzXs]="24" [nzSm]="12" [nzMd]="5">
       <div class="text-lg mb-3 sm:mb-7 mt-3 sm:mt-0">Information</div>
-      <div class="text-sm leading-6">Home</div>
-      <div class="text-sm leading-6">Our Programmes</div>
-      <div class="text-sm leading-6">Admissions</div>
-      <div class="text-sm leading-6">Gallery</div>
-      <div class="text-sm leading-6">Contact Us</div>
+      <div class="text-sm leading-6 cursor-pointer" [routerLink]="'/home'">
+        Home
+      </div>
+      <div class="text-sm leading-6 cursor-pointer" [routerLink]="'/programs'">
+        Our Programmes
+      </div>
+      <div
+        class="text-sm leading-6 cursor-pointer"
+        [routerLink]="'/admission/admissionProcess'"
+      >
+        Admissions
+      </div>
     </div>
     <div nz-col [nzXs]="24" [nzSm]="12" [nzMd]="5">
-      <div class="text-lg mb-3 sm:mb-7 mt-3 sm:mt-0">About BOMIS</div>
-      <div class="text-sm leading-6">About Us</div>
-      <div class="text-sm leading-6">Our Journey</div>
-      <div class="text-sm leading-6">Vision and Mission</div>
-      <div class="text-sm leading-6">Philosophy</div>
-      <div class="text-sm leading-6">The Logo</div>
+      <div class="text-lg mb-3 sm:mb-7 mt-3 sm:mt-0">About SAIS</div>
+      <div class="text-sm leading-6 cursor-pointer" [routerLink]="'/about'">
+        About Us
+      </div>
+      <div class="text-sm leading-6 cursor-pointer" [routerLink]="'/gallery'">
+        Gallery
+      </div>
+      <div class="text-sm leading-6 cursor-pointer" [routerLink]="'/contact'">
+        Contact Us
+      </div>
     </div>
     <div nz-col [nzXs]="0" [nzSpan]="2" [nzSm]="2" [nzMd]="2"></div>
   </div>

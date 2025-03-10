@@ -1,0 +1,24 @@
+<div class="admissions-process">
+  <!-- Banner Section -->
+  <div class="banner">
+    <h1>Admissions Process</h1>
+  </div>
+
+  <!-- Requisites for Admission Section -->
+  <div class="admission-content">
+    <h4 class="sub-heading">ADMISSIONS PROCESS</h4>
+    <h2 class="main-heading">Requisites for Admission</h2>
+
+    <!-- Steps in the process -->
+    <div class="steps-container">
+      <div
+        *ngFor="let step of admissionSteps"
+        class="step-card"
+        [ngStyle]="{ background: step.color }"
+      >
+        <div class="step-number">{{ step.id }}</div>
+        <p>{{ step.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
