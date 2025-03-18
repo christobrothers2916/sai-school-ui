@@ -1,0 +1,21 @@
+<div class="events-section">
+    <div nz-container>
+        <div class="flex items-center justify-center pb-4">
+            <span class="text-[15px] font-semibold leading-[24px] mr-2">EVENTS</span>
+            <img src="assets/img/icons/bird.svg" alt="bird" />
+        </div>
+
+        <div nz-row [nzGutter]="24" nzJustify="center">
+            <div nz-col *ngFor="let event of eventsList" [nzXs]="22" [nzSm]="11" [nzMd]="8" [nzLg]="6">
+                <nz-card [nzBordered]="false" class="event-card">
+                    <img [src]="event.image" [alt]="event.title" class="event-image" />
+                    <div class="event-content">
+                        <h3 class="event-title">{{ event.title }}</h3>
+                        <p class="event-description">{{ event.description }}</p>
+                        <a [routerLink]="event.link" class="read-more">Read More</a>
+                    </div>
+                </nz-card>
+            </div>
+        </div>
+    </div>
+</div>

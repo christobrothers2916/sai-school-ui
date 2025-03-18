@@ -1,0 +1,21 @@
+<div class="news-section">
+  <div nz-container>
+    <div class="flex items-center justify-center pb-4">
+      <span class="text-[15px] font-semibold leading-[24px] mr-2">NEWS</span>
+      <img src="assets/img/icons/bird.svg" alt="bird" />
+    </div>
+
+    <div nz-row [nzGutter]="24" nzJustify="center">
+      <div nz-col *ngFor="let news of newsList" [nzXs]="22" [nzSm]="11" [nzMd]="10" [nzLg]="6">
+        <nz-card [nzBordered]="false" class="news-card">
+          <img [src]="news.image" [alt]="news.title" class="news-image" />
+          <div class="news-content">
+            <h3 class="news-title">{{ news.title }}</h3>
+            <p class="news-description">{{ news.description }}</p>
+            <a [routerLink]="news.link" class="read-more">Read More</a>
+          </div>
+        </nz-card>
+      </div>
+    </div>
+  </div>
+</div>
