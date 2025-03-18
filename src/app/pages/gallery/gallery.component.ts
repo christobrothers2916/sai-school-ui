@@ -15,17 +15,17 @@ export class GalleryComponent {
   galleryItems = [
     {
       title: 'Christmas Day Celebration',
-      image: '../../../assets/img/gallery-img1.JPG',
+      image: 'assets/img/gallery-img1.jpg',
     },
     {
       title: 'Purple Colour Day',
-      image: '../../../assets/img/gallery-img1.JPG',
+      image: 'assets/img/gallery-img2.png',
     },
     {
       title: 'Annual Day Celebrations',
-      image: '../../../assets/img/gallery-img1.JPG',
+      image: 'assets/img/gallery-img3.jpg',
     },
-    { title: 'Bridge Course', image: '../../../assets/img/gallery-img1.JPG' },
+    { title: 'Bridge Course', image: 'assets/img/gallery-img4.png' },
   ];
   constructor() {}
 }

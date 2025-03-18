@@ -3,3 +3,7 @@
   height: 400px;
   object-fit: cover;
 }
+
+::ng-deep .slick-initialized {
+  height: 400px !important;
+}

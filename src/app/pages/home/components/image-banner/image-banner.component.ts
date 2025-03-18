@@ -18,6 +18,7 @@ export class ImageBannerComponent {
       'assets/img/banner2.png',
       'assets/img/banner3.png',
       'assets/img/banner4.png',
+      'assets/img/banner5.png',
     ];
   }
 }
