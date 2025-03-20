@@ -15,7 +15,7 @@ export class GalleryComponent {
   galleryItems = [
     {
       title: 'Christmas Day Celebration',
-      image: 'assets/img/gallery-img1.jpg',
+      image: 'assets/img/gallery-img1.jpeg',
     },
     {
       title: 'Purple Colour Day',

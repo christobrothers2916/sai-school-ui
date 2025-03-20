@@ -1,17 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AntDesignModule } from '../../../../../shared/ant-design.module';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-news-details',
   standalone: true,
   imports: [CommonModule, AntDesignModule],
   templateUrl: './news-details.component.html',
-  styleUrl: './news-details.component.scss'
+  styleUrl: './news-details.component.scss',
 })
-export class NewsDetailsComponent implements OnInit {
+export class NewsDetailsComponent implements OnInit, OnDestroy {
   newsList = [
     {
       id: 1,
@@ -38,17 +39,31 @@ export class NewsDetailsComponent implements OnInit {
       content: 'How students can improve their skills...',
     },
   ];
-
   newsItem: any;
+  private subscription = new Subscription();
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    const newsId = Number(this.route.snapshot.paramMap.get('id'));
-    this.newsItem = this.newsList.find((news) => news.id === newsId);
+    this.subscription.add(
+      this.route.params.subscribe((param: { [key: string]: string }) => {
+        if (param?.['id']) {
+          this.newsItem = this.newsList.find(
+            (news) => news.id === Number(param['id'])
+          );
+        }
+      })
+    );
   }
 
   navigateToDetails(newsId: number) {
     this.router.navigate(['/news/news-details', newsId]);
-  } 
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
 }

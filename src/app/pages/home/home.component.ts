@@ -25,7 +25,7 @@ import { EventsComponent } from './components/events/events.component';
 })
 export class HomeComponent {
   galleryImages = [
-    { src: 'assets/img/gallery-img1.jpg', alt: '' },
+    { src: 'assets/img/gallery-img1.jpeg', alt: '' },
     { src: 'assets/img/gallery-img2.png', alt: '' },
     { src: 'assets/img/gallery-img3.jpg', alt: '' },
     { src: 'assets/img/gallery-img4.png', alt: '' },
