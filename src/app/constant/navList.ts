@@ -17,6 +17,20 @@ export const navList: NavItems[] = [
     subItems: [],
   },
   {
+    name: 'News & Events',
+    route: '',
+    subItems: [
+      {
+        name: 'News',
+        route: '/news',
+      },
+      {
+        name: 'Events',
+        route: '/events',
+      },
+    ],
+  },
+  {
     name: 'Admissions',
     route: '',
     subItems: [

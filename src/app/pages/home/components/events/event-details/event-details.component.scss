@@ -1,0 +1,97 @@
+.banner {
+    position: relative;
+    height: 250px;
+    background: url('../../../../../../assets/img/gallery-banner.png');
+    background-position: top center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+  
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 227, 255, 0.54); /* Orange overlay */
+    }
+  
+    h1 {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  
+  .event-details {
+    padding: 20px;
+  }
+  
+  .event-content {
+    .event-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 15px;
+    }
+  
+    .event-image {
+      width: 100%;
+      max-width: 550px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+    }
+  
+    .event-description {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      text-align: justify;
+    }
+  }
+  
+  .event-sidebar {
+    background: white;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  
+    .sidebar-title {
+      background: #40a9ff;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      margin: 0;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+  
+    .event-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      li {
+        padding: 10px;
+        border-bottom: 1px dashed #ddd;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        font-weight: bold;
+        color: #40a9ff;
+  
+        &:hover {
+          background: #40a9ff;
+          color: white;
+        }
+      }
+    }
+  }
+  

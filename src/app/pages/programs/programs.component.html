@@ -2,44 +2,57 @@
   <div class="banner">
     <h1>Our Programmes</h1>
   </div>
+  <div class="programs-page">
+    <div nz-container>
+      <div nz-row [nzGutter]="32">
+        <!-- Sidebar -->
+        <div nz-col [nzXs]="24" [nzSm]="6">
+          <div class="sidebar">
+            <button
+              *ngFor="let section of sections"
+              class="sidebar-button"
+              [class.active]="section.active"
+              (click)="selectSection(section)"
+            >
+              {{ section.name }}
+            </button>
+          </div>
+        </div>
+        <!-- Main Content -->
+        <div nz-col [nzXs]="24" [nzSm]="18">
+          <div
+            *ngFor="let section of sections"
+            class="content-section"
+            [hidden]="!section.active"
+          >
+            <h2 class="section-title">{{ section.name }}</h2>
+            <hr />
+            <div nz-row [nzGutter]="24">
+              <div nz-col [nzXs]="24" [nzSm]="14">
+                <h3 class="content-subtitle">{{ section.subtitle }}</h3>
+                <ul>
+                  <li *ngFor="let item of section.list">{{ item }}</li>
+                </ul>
+                <p>{{ section.description }}</p>
+              </div>
+              <div nz-col [nzXs]="24" [nzSm]="10">
+                <nz-card nzBordered="false" class="image-card">
+                  <img
+                    [src]="section.image"
+                    alt="Section Image"
+                    class="section-image"
+                  />
+                </nz-card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <nz-row nzJustify="center">
     <nz-col nzXs="24" nzSm="22" nzMd="18" nzLg="14">
       <div class="programs-content-wrapper">
-        <nz-card
-          nzTitle="Early Years Programme (Pre-Nursery & Nursery):"
-          [nzBordered]="false"
-        >
-          <p>
-            At SA International , our early years programme (Pre-Nursery &
-            Nursery) is designed to provide a nurturing, stimulating & joyful
-            learning experience for young children. We focus on building a
-            strong foundation for lifelong learning through play-based,
-            inquiry-driven and hands-on experiences.
-          </p>
-        </nz-card>
-
-        <nz-card
-          nzTitle="Kindergarten Programme (LKG & UKG):"
-          [nzBordered]="false"
-        >
-          <p>
-            Kindergarten (KG1 & KG2) syllabus emphasizes sensory exploration,
-            play-based learning, and socialemotional development, ensuring a
-            smooth transition into structured learning.
-          </p>
-        </nz-card>
-
-        <nz-card
-          nzTitle="Primary years Programme( grade 1 to grade 4):"
-          [nzBordered]="false"
-        >
-          <p>
-            The primary years program builds on concept- based learning,
-            critical thinking, and problem- solving while enhancing STEM
-            education and skill- based learning.
-          </p>
-        </nz-card>
-
         <nz-card
           nzTitle="History of SA International School"
           [nzBordered]="false"

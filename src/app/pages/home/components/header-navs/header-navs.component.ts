@@ -29,6 +29,7 @@ export class HeaderNavsComponent {
   navigateTo(route: any) {
     if (route) {
       this.router.navigate([route]);
+      this.visible = false;
     }
   }
 }

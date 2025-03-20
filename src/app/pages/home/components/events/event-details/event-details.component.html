@@ -1,0 +1,47 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<div class="event-details-wrapper">
+  <div class="banner">
+    <h1>Event</h1>
+  </div>
+  <div class="event-details">
+    <div nz-row nzJustify="center">
+      <div nz-col [nzXs]="24" [nzSm]="22" [nzMd]="20" [nzLg]="18">
+        <div nz-row [nzGutter]="16">
+          <!-- Left Side: event Content -->
+          <div
+            nz-col
+            [nzXs]="24"
+            [nzSm]="24"
+            [nzMd]="16"
+            [nzLg]="16"
+            class="event-content"
+          >
+            <h2 class="event-title">{{ eventItem?.title }}</h2>
+            <img
+              [src]="eventItem?.image"
+              alt="event Image"
+              class="event-image"
+            />
+            <p class="event-description">{{ eventItem?.content }}</p>
+          </div>
+
+          <!-- Right Side: Sidebar (Latest event) -->
+          <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="8" [nzLg]="8">
+            <div class="event-sidebar">
+              <h3 class="sidebar-title">Latest event</h3>
+              <ul class="event-list">
+                <li
+                  *ngFor="let event of eventList"
+                  (click)="navigateToDetails(event.id)"
+                >
+                  {{ event.title }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -69,3 +69,65 @@
     z-index: 1;
   }
 }
+
+.programs-page {
+  padding: 50px 10%;
+  background-color: #f9f9f9;
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .sidebar-button {
+      background: white;
+      padding: 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .sidebar-button.active {
+      background: #40a9ff;
+      color: white;
+    }
+
+    .sidebar-button:hover {
+      background: #40a9ff;
+      color: white;
+    }
+  }
+
+  .content-section {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .content-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .image-card {
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .section-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+}

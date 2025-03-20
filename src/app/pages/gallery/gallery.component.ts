@@ -27,5 +27,6 @@ export class GalleryComponent {
     },
     { title: 'Bridge Course', image: 'assets/img/gallery-img4.png' },
   ];
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
 }

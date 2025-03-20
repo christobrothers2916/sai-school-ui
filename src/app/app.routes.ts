@@ -13,6 +13,16 @@ export const routes: Routes = [
       import('./pages/about/about.routes').then((m) => m.ABOUT_ROUTES),
   },
   {
+    path: 'news',
+    loadChildren: () =>
+      import('./pages/home/components/news/news.routes').then((m) => m.NEWS_ROUTES),
+  },
+  {
+    path: 'events',
+    loadChildren: () =>
+      import('./pages/home/components/events/events.routes').then((m) => m.EVENTS_ROUTES),
+  },
+  {
     path: 'admission',
     loadChildren: () =>
       import('./pages/home/admission/admission.routes').then(

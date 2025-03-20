@@ -1,3 +1,5 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
 <div class="lg:hidden md:hidden">
   <div class="flex items-center justify-center mt-3">
     <button
@@ -106,6 +108,7 @@
           nz-menu-item
           [nzSelected]="nav.name === 'Home' ? true : false"
           [routerLink]="nav?.route"
+          (click)="close()"
         >
           {{ nav?.name }}
         </li>
@@ -120,6 +123,7 @@
               *ngFor="let subMenu of nav?.subItems"
               nz-menu-item
               [routerLink]="subMenu?.route"
+              (click)="close()"
             >
               {{ subMenu?.name }}
             </li>

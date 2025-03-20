@@ -1,0 +1,43 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<div class="news-details-wrapper">
+  <div class="banner">
+    <h1>News</h1>
+  </div>
+  <div class="news-details">
+    <div nz-row nzJustify="center">
+      <div nz-col [nzXs]="24" [nzSm]="22" [nzMd]="20" [nzLg]="18">
+        <div nz-row [nzGutter]="16">
+          <!-- Left Side: News Content -->
+          <div
+            nz-col
+            [nzXs]="24"
+            [nzSm]="24"
+            [nzMd]="16"
+            [nzLg]="16"
+            class="news-content"
+          >
+            <h2 class="news-title">{{ newsItem?.title }}</h2>
+            <img [src]="newsItem?.image" alt="News Image" class="news-image" />
+            <p class="news-description">{{ newsItem?.content }}</p>
+          </div>
+
+          <!-- Right Side: Sidebar (Latest News) -->
+          <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="8" [nzLg]="8">
+            <div class="news-sidebar">
+              <h3 class="sidebar-title">Latest News</h3>
+              <ul class="news-list">
+                <li
+                  *ngFor="let news of newsList"
+                  (click)="navigateToDetails(news.id)"
+                >
+                  {{ news.title }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
